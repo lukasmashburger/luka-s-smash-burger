@@ -2,14 +2,14 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Luka’s Smash Burger · Cerdanyola del Vallès</title>
 
-  <!-- Tipografía moderna: INTER -->
+  <!-- Tipografía moderna: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Estilos -->
-  assets/css/styles.css
+  <!-- Estilos globales -->
+  <link rel="stylesheet" href="assets/css/styles.css" />
 
   <!-- SEO -->
   <meta name="description" content="Smash burgers premium en Cerdanyola del Vallès. Terraza, take away y delivery en Uber Eats y Glovo. Reservas por WhatsApp.">
@@ -17,95 +17,101 @@
 
 <body>
 
-  <!-- HEADER PROFESIONAL -->
+  <!-- ======================
+          HEADER
+  ======================= -->
   <header class="header">
     <div class="container nav">
 
-      <!-- LOGO -->
-      index.html
-        assets/img/avelino.jpg
-        <strong style="font-weight:800; font-size:1.1rem;">Luka’s Smash Burger</strong>
+      <!-- LOGO/TÍTULO (si tienes logo.png lo pondremos luego) -->
+      <a class="logo" href="index.html" aria-label="Inicio Luka’s Smash Burger">
+        <img src="assets/img/avelino.jpg" alt="Luka’s Smash Burger - logo temporal" />
+        <strong style="font-weight:800; font-size:1.05rem;">Luka’s Smash Burger</strong>
       </a>
 
       <!-- MENÚ NAVEGACIÓN -->
-      <nav class="nav-links">
-        menu.htmlMenú</a>
-        sobre.htmlSobre</a>
-        delivery.htmlDelivery</a>
-        contacto.htmlContacto</a>
-        reservas.htmlReservar</a>
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="menu.html">Menú</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="delivery.html">Delivery</a>
+        <a href="contacto.html">Contacto</a>
+        <a class="btn" href="reservas.html">Reservar</a>
       </nav>
 
     </div>
   </header>
 
-  <!-- HERO PROFESIONAL -->
+
+  <!-- ======================
+            HERO
+  ======================= -->
   <section class="hero">
     <div class="container hero-inner">
       
+      <!-- TEXTOS -->
       <div>
-        <h1 style="font-weight:800;">
-          Smash Burgers<br>Hechas en Cerdanyola
-        </h1>
+        <h1>Smash Burgers hechas en Cerdanyola</h1>
 
-        <p class="lead" style="font-weight:400;">
-          Las mejores smash de la zona. Carne 100% frisona, pan brioche artesano y recetas premiadas.
-          <br><br>
-          C/Torrent 10 · Terraza · Precio medio 10–20€.  
+        <p class="lead">
+          Carne 100% frisona, pan brioche artesano y combinaciones top.
+          C/ Torrent, 10 · Terraza · Precio medio 10–20 €.
+          Reservas por WhatsApp · Delivery en Uber Eats y Glovo.
         </p>
 
         <!-- CTA Buttons -->
         <div class="hero-cta">
-          https://api.whatsapp.com/send/?phone=34930061133&text=Hola%21+Quiero+reservar+en+Luka%27s+Smash+Burger&type=phone_number&app_absent=0
-            Reservar mesa
-          </a>
-
-          delivery.htmlPedir a domicilio</a>
-
-          menu.htmlVer menú</a>
+          <a class="btn" href="https://api.whatsapp.com/send/?phone=34930061133&text=Hola%21+Quiero+reservar+en+Luka%27s+Smash+Burger&type=phone_number&app_absent=0" target="_blank" rel="noopener">Reservar mesa</a>
+          <a class="btn-outline" href="delivery.html">Pedir a domicilio</a>
+          <a class="btn-outline" href="menu.html">Ver menú</a>
         </div>
 
-        <!-- BADGES -->
-        <div class="badges" style="margin-top:1.6rem;">
+        <!-- BADGES (sin emojis) -->
+        <div class="badges" style="margin-top:1.1rem;">
           <span class="badge">★ 4,6 en Google</span>
           <span class="badge">★ 4,6 en Uber Eats</span>
-          https://www.instagram.com/hoytocalukas/Instagram</a>
+          <a class="badge" href="https://www.instagram.com/hoytocalukas/" target="_blank" rel="noopener" aria-label="Instagram @hoytocalukas">
+            Instagram @hoytocalukas
+          </a>
         </div>
       </div>
 
       <!-- IMAGEN HERO -->
       <div class="hero-img">
-        assets/img/explosiva.jpg
+        <img src="assets/img/explosiva.jpg" alt="La Explosiva - Luka’s Smash Burger">
       </div>
 
     </div>
   </section>
 
 
-  <!-- SECCIÓN DESTACADOS -->
+  <!-- ======================
+        SECCIÓN DESTACADOS
+  ======================= -->
   <section class="section">
     <div class="container">
       
-      <h2 style="font-weight:800;">Calidad por encima de todo</h2>
+      <h2>Calidad por encima de todo</h2>
 
       <div class="cards">
 
         <article class="card">
-          <h3 style="font-weight:700;">Carne 100% frisona</h3>
-          <p>Corte premium smash con el punto perfecto y sabor intenso.</p>
+          <h3>Carne 100% frisona</h3>
+          <p>Smash al punto con pan brioche artesano y combinaciones irresistibles.</p>
+          <div class="cta-mini"><a class="btn-outline" href="menu.html">Ver hamburguesas</a></div>
         </article>
 
         <article class="card">
-          <h3 style="font-weight:700;">Reservas fáciles</h3>
-          <p>
-            Lunes–Viernes 20:00–23:30<br>
-            Sábado y Domingo 13:00–16:00 y 20:00–23:30
-          </p>
+          <h3>Reservas fáciles</h3>
+          <p>L–V 20:00–23:30 · S–D 13:00–16:00 y 20:00–23:30.</p>
+          <div class="cta-mini">
+            <a class="btn-outline" href="https://api.whatsapp.com/send/?phone=34930061133&text=Hola%21+Quiero+reservar+en+Luka%27s+Smash+Burger&type=phone_number&app_absent=0" target="_blank" rel="noopener">Reservar por WhatsApp</a>
+          </div>
         </article>
 
         <article class="card">
-          <h3 style="font-weight:700;">Delivery rápido</h3>
-          <p>Uber Eats y Glovo al instante. También disponible take away.</p>
+          <h3>Delivery a tu puerta</h3>
+          <p>Disponible en Uber Eats y Glovo. También take away en el local.</p>
+          <div class="cta-mini"><a class="btn-outline" href="delivery.html">Pedir ahora</a></div>
         </article>
 
       </div>
@@ -113,33 +119,35 @@
   </section>
 
 
-  <!-- MENÚ PREVIEW -->
+  <!-- ======================
+         PREVIEW MENÚ
+  ======================= -->
   <section class="section">
     <div class="container">
-      <h2 style="font-weight:800;">Top burgers de Luka’s</h2>
+      <h2>Algunas de nuestras smash</h2>
 
       <div class="grid-menu">
 
         <article class="menu-item">
-          assets/img/explosiva.jpg
+          <img src="assets/img/explosiva.jpg" alt="La Explosiva - Luka’s" />
           <h4>La Explosiva</h4>
           <div class="price">15,20 €</div>
         </article>
 
         <article class="menu-item">
-          assets/img/elegante.jpg
+          <img src="assets/img/elegante.jpg" alt="La Elegante - Luka’s" />
           <h4>La Elegante</h4>
           <div class="price">15,50 €</div>
         </article>
 
         <article class="menu-item">
-          assets/img/encantadora.jpg
+          <img src="assets/img/encantadora.jpg" alt="La Encantadora - Luka’s" />
           <h4>La Encantadora</h4>
           <div class="price">15,50 €</div>
         </article>
 
         <article class="menu-item">
-          assets/img/avelino.jpg
+          <img src="assets/img/avelino.jpg" alt="Avelino - Luka’s" />
           <h4>Avelino</h4>
           <div class="price">15,20 €</div>
         </article>
@@ -154,27 +162,27 @@
   <div class="mobile-cta">
     <div class="container">
       <div class="row">
-        https://api.whatsapp.com/send/?phone=34930061133&text=Hola%21+Quiero+reservar+en+Luka%27s+Smash+Burger&type=phone_number&app_absent=0Reservar</a>
-        delivery.htmlDelivery</a>
+        <a class="btn" href="https://api.whatsapp.com/send/?phone=34930061133&text=Hola%21+Quiero+reservar+en+Luka%27s+Smash+Burger&type=phone_number&app_absent=0" target="_blank" rel="noopener">Reservar</a>
+        <a class="btn-outline" href="delivery.html">Delivery</a>
       </div>
     </div>
   </div>
 
 
-  <!-- FOOTER -->
+  <!-- ======================
+           FOOTER
+  ======================= -->
   <footer class="footer">
     <div class="container">
 
-      <div style="display:flex; flex-wrap:wrap; gap: 1rem; justify-content:space-between;">
+      <div style="display:flex; flex-wrap:wrap; gap: 1rem; justify-content:space-between; align-items:center;">
         
-        <div>
-          © Luka’s Smash Burger · C/ Torrent, 10 · Cerdanyola del Vallès · Tel. 930 06 11 33
-        </div>
+        <div>© Luka’s Smash Burger · C/ Torrent, 10 · 08290 Cerdanyola del Vallès · Tel. 930 06 11 33</div>
 
-        <div style="display:flex; gap:1rem;">
-          https://www.instagram.com/hoytocalukas/Instagram</a>
-          reservas.htmlReservas</a>
-          contacto.htmlContacto</a>
+        <div style="display:flex; gap:.8rem;">
+          <a href="https://www.instagram.com/hoytocalukas/" target="_blank" rel="noopener">Instagram</a>
+          <a href="reservas.html">Reservas</a>
+          <a href="contacto.html">Contacto</a>
         </div>
 
       </div>
