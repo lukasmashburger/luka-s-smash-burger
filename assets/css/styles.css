@@ -1,1 +1,310 @@
+/* ===============================
+   LUKA'S SMASH BURGER – styles.css
+   Estilo 50% SmashHouse + 50% Luka’s
+   Diseño urbano limpio, moderno y profesional
+   =============================== */
 
+/* ----- Reset ------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html, body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #0f0f0f;
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* ----- Variables ----- */
+:root {
+  --bg: #0f0f0f;
+  --bg-soft: #151515;
+  --text: #ffffff;
+  --text-soft: #bdbdbd;
+  --brand: #ff3b30;      /* rojo urbano (marca principal) */
+  --brand2: #ffb703;     /* amarillo acento */
+  --card: #1b1b1b;
+  --border: #2a2a2a;
+  --shadow: 0px 10px 35px rgba(0,0,0,0.35);
+}
+
+/* ----- Layout global ----- */
+.container {
+  width: min(1200px, 92%);
+  margin: auto;
+}
+
+/* ----- Header ----- */
+.header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background: rgba(10,10,10,0.8);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(8px);
+  z-index: 999;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+}
+
+.logo img {
+  width: 44px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+  font-weight: 600;
+}
+
+.nav-links a:hover {
+  color: var(--brand2);
+}
+
+/* ----- Botones ----- */
+.btn {
+  background: var(--brand);
+  color: #fff;
+  padding: 0.85rem 1.2rem;
+  border-radius: 12px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  transition: 0.2s ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  opacity: 0.9;
+}
+
+.btn-outline {
+  padding: 0.8rem 1.1rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  color: var(--text);
+  font-weight: 600;
+  transition: 0.2s ease;
+}
+.btn-outline:hover {
+  border-color: #fff;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  width: 100%;
+  background: radial-gradient(900px 600px at 10% -20%, rgba(255,59,48,0.25), transparent),
+              radial-gradient(800px 500px at 110% 10%, rgba(255,183,3,0.2), transparent),
+              var(--bg);
+  padding: 4rem 0;
+}
+
+.hero-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  align-items: center;
+  gap: 2rem;
+  min-height: 80vh;
+}
+
+.hero h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.05;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.hero .lead {
+  font-size: clamp(1rem, 1.5vw, 1.3rem);
+  color: var(--text-soft);
+  margin-bottom: 1.5rem;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 1.3rem;
+}
+
+.badge {
+  background: rgba(255,255,255,0.08);
+  padding: 0.35rem 0.7rem;
+  border-radius: 50px;
+  border: 1px solid var(--border);
+  color: var(--text-soft);
+  font-size: 0.8rem;
+}
+
+/* Imagen hero */
+.hero-img {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+/* ---------- SECCIONES ---------- */
+.section {
+  padding: 3.5rem 0;
+}
+
+.section h2 {
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 900;
+  margin-bottom: 1.5rem;
+}
+
+/* ----- Cards ----- */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.3rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.4rem;
+  box-shadow: var(--shadow);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+}
+
+/* ----- Menú Preview Grid ----- */
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.2rem;
+}
+
+.menu-item {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1rem;
+  text-align: left;
+  transition: 0.2s ease;
+}
+
+.menu-item:hover {
+  border-color: var(--brand2);
+  transform: translateY(-3px);
+}
+
+.menu-item img {
+  border-radius: 12px;
+  margin-bottom: 0.7rem;
+}
+
+.menu-item h4 {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.price {
+  color: var(--brand2);
+  font-size: 1rem;
+  font-weight: 800;
+}
+
+/* ----- CTA fija móvil ----- */
+.mobile-cta {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mobile-cta {
+    display: block;
+    background: #111;
+    border-top: 1px solid var(--border);
+    padding: 0.7rem;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  .mobile-cta .row {
+    display: flex;
+    gap: 0.7rem;
+  }
+  .mobile-cta a {
+    flex: 1;
+    text-align: center;
+  }
+}
+
+/* ----- Footer ----- */
+.footer {
+  padding: 2.5rem 0;
+  background: #0d0d0d;
+  border-top: 1px solid var(--border);
+  color: var(--text-soft);
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .hero-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid-menu {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 650px) {
+  .cards,
+  .grid-menu {
+    grid-template-columns: 1fr;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
